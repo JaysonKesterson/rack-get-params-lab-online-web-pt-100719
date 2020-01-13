@@ -23,6 +23,7 @@ class Application
       add_term = req.params["item"]
       if @@items.include?(add_term)
         @@cart << add_term
+        resp.write "added "
       else
         resp.write "This is an error message"
       end
